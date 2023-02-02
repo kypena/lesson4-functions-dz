@@ -34,20 +34,133 @@
 Для реализации основного меню можно использовать пример ниже или написать свой
 """
 
+# 3. история покупок
+# выводим историю покупок пользователя (название и сумму)
+# возвращаемся в основное меню
+
+# Variant 1
+
+# while True:
+#     print('1. пополнение счета')
+#     print('2. покупка')
+#     print('3. история покупок')
+#     print('4. выход')
+#
+#     choice = input('Choose menu - ')
+#
+#     balance_account = 0
+#
+#     while choice == '1':
+#
+#         donation = int(input('Enter the sum to dowload - '))
+#
+#         balance_account += donation
+#         print(f" balance_account: {balance_account}")
+#         choice = input('Enter choice code - ')
+#
+#     if choice == '2':
+#         purchase_price = int(input('Enter purchase price - '))
+#         if purchase_price <= balance_account:
+#             purchase_history = []
+#             balance_account -= purchase_price
+#             purchase_name =  input('Enter the name of purchse -  ')
+#             purchase_history.append((purchase_name,purchase_price, balance_account))
+#
+#         else:
+#             print('Lack of funds on the account')
+#
+#     elif choice == '3':
+#         print(purchase_history)
+#     elif choice == '4':
+#         break
+#     else:
+#         print('Not existing menu type.')
+
+
+# Variant 2
+
+def choice_1(account):
+
+    while choice == '1':
+        donation = int(input('Enter the sum to dowload - '))
+        account += donation
+        #print(f" balance_account: {balance_account}")
+        return account
+    #else:
+    #    print('Enter another code')
+
+
+def choice_2(account):
+    if choice == '2':
+        purchase_price = int(input('Enter purchase price - '))
+
+        if purchase_price > account:
+
+            print('Lack of funds on the account')
+
+
+        else:
+            #purchase_history = []
+            account -= purchase_price
+            purchase_name =  input('Enter the name of purchse -  ')
+            purchase_history.append((purchase_name,purchase_price, balance_account))
+            return account
+
+purchase_history = []
+balance_account = 0
+
 while True:
     print('1. пополнение счета')
     print('2. покупка')
     print('3. история покупок')
     print('4. выход')
 
-    choice = input('Выберите пункт меню')
+    choice = input('Choose menu - ')
+
+
     if choice == '1':
-        pass
-    elif choice == '2':
-        pass
+        choice_1(balance_account)
+
+    # while choice == '1':
+    #
+    #     donation = int(input('Enter the sum to dowload - '))
+    #
+    #     balance_account += donation
+    #     print(f" balance_account: {balance_account}")
+    #     choice = input('Enter choice code - ')
+
+    if choice == '2':
+        balance_account = choice_2(balance_account)
+
     elif choice == '3':
-        pass
+        print(purchase_history)
     elif choice == '4':
         break
     else:
-        print('Неверный пункт меню')
+        print('Not existing menu type.')
+print(f" balance_account: {balance_account}")
+
+
+ # Variant 3
+# def purchase():
+#
+#     purchase_list = dict()
+#     account = 0
+#     money = int(input("Enter the sum you want to submit on your account - "))
+#     account += money
+#
+#     price = int(input('Enter purchase price - '))
+#
+#     if price > account:
+#         print("Lack of funds for this purchase.")
+#     else:
+#         account -= price
+#         purchase_name = input('Enter the purchase name - ')
+#         purchase_list['purchase_name'] = purchase_name
+#         purchase_list['price'] = price
+#         purchase_list['account balance'] = account
+#     print(purchase_list)
+#         #print(purchase_name, ":", price,':', account)
+#
+#
+# purchase()

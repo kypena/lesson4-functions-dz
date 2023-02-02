@@ -6,16 +6,15 @@
 Задание: реализовать код функции, чтобы он работал по описанию и примеры использования давали верный результат
 """
 
-
-def simple_separator():
+def separator(simbol, count):
     """
-    Функция создает красивый резделитель из 10-и звездочек (**********)
-    :return: **********
+    Функция создает разделитель из любых символов любого количества
+    :param simbol: символ разделителя
+    :param count: количество повторений
+    :return: строка разделитель примеры использования ниже
     """
-    pass
+    return simbol * count
 
-
-print(simple_separator() == '**********')  # True
 
 
 def long_separator(count):
@@ -24,23 +23,20 @@ def long_separator(count):
     :param count: количество звездочек
     :return: строка разделитель, примеры использования ниже
     """
-    pass
+    return  separator('*', count)
 
+
+def simple_separator():
+    """
+    Функция создает красивый резделитель из 10-и звездочек (**********)
+    :return: **********
+    """
+    return  long_separator(10)
+
+print(simple_separator() == '**********')  # True
 
 print(long_separator(3) == '***')  # True
 print(long_separator(4) == '****')  # True
-
-
-def separator(simbol, count):
-    """
-    Функция создает разделитель из любых символов любого количества
-    :param simbol: символ разделителя
-    :param count: количество повторений
-    :return: строка разделитель примеры использования ниже
-    """
-    pass
-
-
 print(separator('-', 10) == '----------')  # True
 print(separator('#', 5) == '#####')  # True
 
@@ -55,8 +51,11 @@ def hello_world():
     ##########
     :return: None
     """
-    pass
-
+    print(separator('*', 10))
+    print()
+    print('Hello World!')
+    print()
+    print(separator('#', 10))
 
 '''
 **********
@@ -79,7 +78,11 @@ def hello_who(who='World'):
     :param who: кого мы приветствуем, по умолчанию World
     :return: None
     """
-    pass
+    print(separator('*', 10))
+    print()
+    print(f'Hello {who}!')
+    print()
+    print(separator('#', 10))
 
 
 '''
@@ -115,8 +118,11 @@ def pow_many(power, *args):
     :param args: любое количество цифр
     :return: результат вычисления # True -> (1 + 2)**1
     """
-    pass
-
+    #return sum(args) ** power
+    result = 0
+    for num in args:
+        result += num
+    return result ** power
 
 print(pow_many(1, 1, 2) == 3)  # True -> (1 + 2)**1 == 3
 print(pow_many(1, 2, 3) == 5)  # True -> (2 + 3)**1 == 5
@@ -133,8 +139,8 @@ def print_key_val(**kwargs):
     :param kwargs: любое количество именованных параметров
     :return: None
     """
-    pass
-
+    for i, k in kwargs.items():
+        print(f'{i}={k}')
 
 """
 name --> Max
@@ -158,7 +164,13 @@ def my_filter(iterable, function):
     :param function: функция фильтрации
     :return: новая отфильтрованная последовательность
     """
-    pass
+    #return list(filter(function, iterable))
+    lst = []
+    for i in iterable:
+        if function(i):
+            lst.append(i)
+    return lst
+
 
 
 print(my_filter([1, 2, 3, 4, 5], lambda x: x > 3) == [4, 5])  # True
