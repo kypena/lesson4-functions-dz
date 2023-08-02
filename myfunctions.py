@@ -6,7 +6,7 @@
 Задание: реализовать код функции, чтобы он работал по описанию и примеры использования давали верный результат
 """
 
-def separator(simbol, count): #def what means? 
+def separator(simbol, count): #def what means? Ключовое слово для создания функции. Чтобы создать функцию нужно написать def + название функции 
     """
     Функция создает разделитель из любых символов любого количества
     :param simbol: символ разделителя
@@ -23,7 +23,7 @@ def long_separator(count):
     :param count: количество звездочек
     :return: строка разделитель, примеры использования ниже
     """
-    return  separator('*', count) #what means return? 
+    return  separator('*', count) #what means return? Ключевое слово return возвращает результат из функции.
 
 
 def simple_separator():

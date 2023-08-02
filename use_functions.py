@@ -40,7 +40,7 @@
 
 # Variant 1
 
-# while True: # what means while?
+# while True: #Ключовое слово while используется для создания цикла 
 #     print('1. пополнение счета')
 #     print('2. покупка')
 #     print('3. история покупок')
@@ -110,7 +110,7 @@ purchase_history = []
 balance_account = 0
 
 while True:
-    print("""1. пополнение счета
+    print("""1. пополнение счета 
           \n2. покупка
           \n3. история покупок
           \n4. выход\n""") # We use escape sequence fhttps://code-basics.com/ru/languages/python/lessons/escape-characters 
