@@ -40,7 +40,7 @@
 
 # Variant 1
 
-# while True:
+# while True: # what means while?
 #     print('1. пополнение счета')
 #     print('2. покупка')
 #     print('3. история покупок')
