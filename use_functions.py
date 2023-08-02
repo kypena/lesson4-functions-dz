@@ -81,7 +81,7 @@
 
 def choice_1(account):
 
-    while choice == '1':
+    while choice == '1': # Why is 1 is string but not integer type
         donation = int(input('Enter the sum to dowload - '))
         account += donation
         #print(f" balance_account: {balance_account}")
@@ -110,10 +110,12 @@ purchase_history = []
 balance_account = 0
 
 while True:
-    print('1. пополнение счета')
-    print('2. покупка')
-    print('3. история покупок')
-    print('4. выход')
+    print("""1. пополнение счета
+          \n2. покупка
+          \n3. история покупок
+          \n4. выход\n""") # We use escape sequence fhttps://code-basics.com/ru/languages/python/lessons/escape-characters 
+
+
 
     choice = input('Choose menu - ')
 
