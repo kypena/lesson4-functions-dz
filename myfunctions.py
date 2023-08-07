@@ -13,7 +13,7 @@ def separator(simbol, count):
     :param count: количество повторений
     :return: строка разделитель примеры использования ниже
     """
-    return simbol * count # не понимаю что такое return
+    return simbol * count 
 
 
 
