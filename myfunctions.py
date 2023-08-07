@@ -6,14 +6,14 @@
 Задание: реализовать код функции, чтобы он работал по описанию и примеры использования давали верный результат
 """
 
-def separator(simbol, count): #def what means? Ключовое слово для создания функции. Чтобы создать функцию нужно написать def + название функции 
+def separator(simbol, count):
     """
     Функция создает разделитель из любых символов любого количества
     :param simbol: символ разделителя
     :param count: количество повторений
     :return: строка разделитель примеры использования ниже
     """
-    return simbol * count
+    return simbol * count # не понимаю что такое return
 
 
 
@@ -23,7 +23,7 @@ def long_separator(count):
     :param count: количество звездочек
     :return: строка разделитель, примеры использования ниже
     """
-    return  separator('*', count) #what means return? Ключевое слово return возвращает результат из функции.
+    return  separator('*', count)
 
 
 def simple_separator():
@@ -31,7 +31,7 @@ def simple_separator():
     Функция создает красивый резделитель из 10-и звездочек (**********)
     :return: **********
     """
-    return  long_separator(10) # Does it callback? 
+    return  long_separator(10)
 
 print(simple_separator() == '**********')  # True
 
@@ -52,9 +52,9 @@ def hello_world():
     :return: None
     """
     print(separator('*', 10))
-    print() # Why function has no arguments
+    print()
     print('Hello World!')
-    print() 
+    print()
     print(separator('#', 10))
 
 '''
@@ -111,7 +111,7 @@ Hello Kate!
 hello_who('Kate')
 
 
-def pow_many(power, *args): # when we use *args and why
+def pow_many(power, *args):
     """
     Функция складывает любое количество цифр и возводит результат в степень power (примеры использования ниже)
     :param power: степень
@@ -131,7 +131,7 @@ print(pow_many(3, 2) == 8)  # True -> 2**3 == 8
 print(pow_many(2, 1, 2, 3, 4) == 100)  # True -> (1 + 2 + 3 + 4)**2 == 10**2 == 100
 
 
-def print_key_val(**kwargs): # what is **kwargs?
+def print_key_val(**kwargs):
     """
     Функция выводит переданные параметры в фиде key --> value
     key - имя параметра
@@ -173,7 +173,7 @@ def my_filter(iterable, function):
 
 
 
-print(my_filter([1, 2, 3, 4, 5], lambda x: x > 3) == [4, 5])  # True # What is lambda and when is better for use?
+print(my_filter([1, 2, 3, 4, 5], lambda x: x > 3) == [4, 5])  # True
 print(my_filter([1, 2, 3, 4, 5], lambda x: x == 2) == [2])  # True
 print(my_filter([1, 2, 3, 4, 5], lambda x: x != 3) == [1, 2, 4, 5])  # True
 print(my_filter(['a', 'b', 'c', 'd'], lambda x: x in 'abba') == ['a', 'b'])  # True
