@@ -38,7 +38,7 @@
 # Variant 3
 
 def question_data(question, data):
-    answer = input(question)# input() используется для ввода значений с клавиатуры
+    answer = input(question)# функция input() используется для ввода значений с клавиатуры
     while answer != data:
         print("Не верно")
         answer = input(question)
