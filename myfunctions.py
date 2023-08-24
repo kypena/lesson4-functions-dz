@@ -17,7 +17,7 @@ def separator(simbol, count):
 
 
 
-def long_separator(count):
+def long_separator(count):#какой стандарт название функции ты используешь, какая нотация?
     """
     Функция создает разделитель из звездочек число которых можно регулировать параметром count
     :param count: количество звездочек
