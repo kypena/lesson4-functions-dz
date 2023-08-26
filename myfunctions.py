@@ -82,7 +82,7 @@ def hello_who(who='World'):
     print(separator('*', 10))
     print()
     print(f'Hello {who}!')
-    print()
+    print() # что делает функция print, почему пустая?
     print(separator('#', 10))
 
 
