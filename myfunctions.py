@@ -82,7 +82,7 @@ def hello_who(who='World'):
     print(separator('*', 10))
     print()
     print(f'Hello {who}!')
-    print() # что делает функция print, почему пустая?
+    print() # в данном случае это перенос каретки или пустая строка
     print(separator('#', 10))
 
 

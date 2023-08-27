@@ -39,7 +39,7 @@
 
 def question_data(question, data):
     answer = input(question)# функция input() используется для ввода значений с клавиатуры
-    while answer != data: # что такое ключевое слово while
+    while answer != data: # while используется в цикле для выполнения какого-либо дейсвтвия пока верно условие
         print("Не верно")
         answer = input(question)
     else:
