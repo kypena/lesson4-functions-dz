@@ -79,7 +79,7 @@
 
 # Variant 2
 
-def choice_1(account):
+def choice_1(account): # what do u mean keyword def ? 
 
     while choice == '1': # Why is 1 is string but not integer type
         donation = int(input('Enter the sum to dowload - '))
