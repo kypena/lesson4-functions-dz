@@ -90,7 +90,7 @@ def choice_1(account): # what do u mean keyword def ?
     #    print('Enter another code')
 
 
-def choice_2(account): # test test 
+def choice_2(account):
     if choice == '2':
         purchase_price = int(input('Enter purchase price - '))
 
