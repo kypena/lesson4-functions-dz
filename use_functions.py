@@ -85,7 +85,7 @@ def choice_1(account): # what do u mean keyword def ?
         donation = int(input('Enter the sum to dowload - '))
         account += donation
         #print(f" balance_account: {balance_account}")
-        return account
+        return account # What return doing in this situation?
     #else:
     #    print('Enter another code')
 
