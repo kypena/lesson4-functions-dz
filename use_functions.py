@@ -79,13 +79,14 @@
 
 # Variant 2
 
-def choice_1(account): # what do u mean keyword def ? 
+def choice_1(account): # key word def is used to define function 
 
-    while choice == '1': # Why is 1 is string but not integer type
+    while choice == '1': # '1' because here choice = input() we recieve str
+
         donation = int(input('Enter the sum to dowload - '))
         account += donation
         #print(f" balance_account: {balance_account}")
-        return account # What return doing in this situation?
+        return account # return the current sum on the account
     #else:
     #    print('Enter another code')
 
