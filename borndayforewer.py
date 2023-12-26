@@ -38,6 +38,7 @@
 # Variant 3
 
 def question_data(question, data):
+    '''Опиши тут что делает эта функция '''
     answer = input(question)
     while answer != data:
         print("Не верно")
@@ -47,3 +48,4 @@ def question_data(question, data):
 
 
 question_data('Enter year - ', '1799')
+
