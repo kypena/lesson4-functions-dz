@@ -79,7 +79,7 @@
 
 # Variant 2
 
-def choice_1(account): # key word def is used to define function 
+def choice_1(account): # key word def is used to define function  
 
     while choice == '1': # '1' because here choice = input() we recieve str
 
