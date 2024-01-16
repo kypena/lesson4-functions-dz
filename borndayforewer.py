@@ -37,7 +37,7 @@
 
 # Variant 3
 
-def question_data(question, data):
+def question_data(question, data): # что делает эта функция
     answer = input(question)# функция input() используется для ввода значений с клавиатуры
     while answer != data: # while используется в цикле для выполнения какого-либо дейсвтвия пока верно условие
         print("Не верно")
