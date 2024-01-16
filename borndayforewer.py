@@ -50,4 +50,3 @@ def question_data(question, data): # принимает на  вход 2 зна�
         print(" Correct!")
 
 question_data('When died Pushkin  - ', '1837')
-
