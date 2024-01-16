@@ -44,9 +44,10 @@
 def question_data(question, data): # принимает на  вход 2 значения 
     answer = input(question)# с клавиатуры вводятся данные согласно question
     while answer != data: # пока наш ответ answer не совпал с data (это ответ на вопрос)
-        print("Не верно") 
+        print("Incorrect!") 
         answer = input(question)# снова выводим тот же вопрос и перезаписываем answer
-
+    else:
+        print(" Correct!")
 
 question_data('When died Pushkin  - ', '1837')
 
