@@ -122,7 +122,7 @@ def pow_many(power, *args):
     #return sum(args) ** power
     result = 0
     for num in args:
-        result += num
+        result += num#Что значит (+=)?
     return result ** power
 
 print(pow_many(1, 1, 2) == 3)  # True -> (1 + 2)**1 == 3
