@@ -36,16 +36,17 @@
 # ask_day()
 
 # Variant 3
-
-def question_data(question, data):
-    '''Опиши тут что делает эта функция '''
-    answer = input(question)
-    while answer != data:
-        print("Не верно")
-        answer = input(question)
+''' 
+ф-я викторина.Задается вопрос и подвется ответ.
+С клавиатуры будет выводится вопрос до тех пор,
+пока ответ пользователя не  совпадет с требуемым ответом.
+'''
+def question_data(question, data): # принимает на  вход 2 значения 
+    answer = input(question)# с клавиатуры вводятся данные согласно question
+    while answer != data: # пока наш ответ answer не совпал с data (это ответ на вопрос)
+        print("Incorrect!") 
+        answer = input(question)# снова выводим тот же вопрос и перезаписываем answer
     else:
         print(" Correct!")
 
-
-question_data('Enter year - ', '1799')
-
+question_data('When died Pushkin  - ', '1837')

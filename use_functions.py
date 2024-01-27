@@ -40,7 +40,7 @@
 
 # Variant 1
 
-# while True:
+# while True: #Ключовое слово while используется для создания цикла 
 #     print('1. пополнение счета')
 #     print('2. покупка')
 #     print('3. история покупок')
@@ -79,13 +79,14 @@
 
 # Variant 2
 
-def choice_1(account):
+def choice_1(account): # key word def is used to define function  
 
-    while choice == '1':
+    while choice == '1': # '1' because here choice = input() we recieve str
+
         donation = int(input('Enter the sum to dowload - '))
         account += donation
         #print(f" balance_account: {balance_account}")
-        return account
+        return account # return the current sum on the account
     #else:
     #    print('Enter another code')
 
@@ -110,10 +111,12 @@ purchase_history = []
 balance_account = 0
 
 while True:
-    print('1. пополнение счета')
-    print('2. покупка')
-    print('3. история покупок')
-    print('4. выход')
+    print("""1. пополнение счета 
+          \n2. покупка
+          \n3. история покупок
+          \n4. выход\n""") # We use escape sequence fhttps://code-basics.com/ru/languages/python/lessons/escape-characters 
+
+
 
     choice = input('Choose menu - ')
 
